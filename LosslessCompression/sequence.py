@@ -124,16 +124,20 @@ def test_4(n1, n2):
 
 def test_5(n1, n2):
     letters = []
+    digits = []
     for char in n1:
         letters.append(char)
     for i in n2:
-        letters.append(i)
-    list0 = []
-    for j in range(N_sequence):
-        list0.append(random.choices(letters, weights=[0.2, 0.2, 0.2, 0.2, 0.2]))
-    list0 = [elem[0] for elem in list0]
-    random.shuffle(list0)
-    original_sequence = "".join(map(str, list0))
+        digits.append(i)
+    list_0 = []
+    for i in letters:
+        for j in range(20):
+            list_0.append(i)
+    for i in digits:
+        for j in range(20):
+            list_0.append(i)
+    random.shuffle(list_0)
+    original_sequence = "".join(map(str, list_0))
     return original_sequence
 
 
